@@ -37,7 +37,7 @@ h1 {
   }
 }
 
-.fish.one {
+#fish1 {
   animation-duration: 20s;
   bottom: 80%;
   animation-delay: -5s;
