@@ -14,18 +14,23 @@ function Home () {
     })
   }
 
-  // const Random = () => {
-  //   return {
-  //     borderStyle: solid
-  //   }
+  const [style, SetStyle] = useState({
+    border: 'dotted'
+})
 
+const changeStyle = () => {
+    SetStyle( {
+        border: '5px solid black'
+ })
+}
+  
   const handleSubmit = (e) => {
     e.preventDefault()
   }
 
   const length = formData.fish1;
-  const newArr = Array.from({length}, () => <Fish/>)
-  console.log(newArr)
+  const newArr = Array.from({length}, () => <Fish styleChange = {changeStyle}/>)
+  //console.log(newArr)
 
   return (
   <>
