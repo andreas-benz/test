@@ -1,3 +1,56 @@
-body {
-  background-color: #ADD8E6;
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("images/fishBackground.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+}
+
+.fish {
+  width: 75px;
+  height: 75px;
+  padding: 8px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 50%;
+
+  position: absolute;
+  animation: linear infinite;
+  animation-name: swim;
+}
+
+@-webkit-keyframes swim {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+.fish.one {
+  animation-duration: 20s;
+  bottom: 80%;
+  animation-delay: -5s;
+}
+
+.fish.two {
+  animation-duration: 30s;
+  bottom: 50%;
+  animation-delay: -15s;
+}
+
+.fish.three {
+  animation-duration: 40s;
+  bottom: 10%;
+  animation-delay: -1s;
 }
