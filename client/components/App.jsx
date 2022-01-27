@@ -1,8 +1,14 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './Home'
 
 function App () {  
   return (
-    <h1>React development has begun!</h1>
+    <>
+  <Routes>
+  <Home />
+  </Routes>
+    </>
   )
 }
 
