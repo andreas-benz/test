@@ -1,30 +1,40 @@
 import React, { useState } from 'react'
+import Fish from './Fish'
 
 function Home () {  
   const [formData, setFormData] = useState({
-    fish: ''
+    fish1: 3
   })
 
   const handleChange = (e) => {
-    console.log(e.target.value)
-    setFormData(e.target.value)
+    //console.log(e.target.value)
+    setFormData({
+      ...formData,
+      [e.target.name]: Number(e.target.value)
+    })
   }
 
+  // const Random = () => {
+  //   return {
+  //     borderStyle: solid
+  //   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+  const length = formData.fish1;
+  const newArr = Array.from({length}, () => <Fish/>)
+  console.log(newArr)
 
   return (
   <>
-  <img src="images/fish_1.png" className="fish" id="fish1" width="200"/>
-  {/* <img src="images/fish_2.png" className="fish" alt="fish2" width="200"/>
-  <img src="images/fish_3.png" className="fish" alt="fish3" width="200"/> */}
-  <form >
-    <label htmlFor = 'fishList'>Fish:</label>
-    <input id='fishList' name='fishNumber' type='number' value={formData} onChange ={handleChange}/>
+   <form onSubmit={handleSubmit}>
+        <label htmlFor = 'fishList'>Fish:</label>
+        <input id='fishList' name='fish1' type='number' value={formData.fish1} onChange ={handleChange}/>
   </form>
-
-
+     {newArr}
   </>
-    
-
   )
 }
 
