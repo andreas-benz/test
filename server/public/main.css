@@ -10,14 +10,32 @@ body, html {
   background-size: cover;
 }
 
+h1 {
+  color: blue;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  margin: 0px;
+}
+
+form {
+  position:relative;
+  z-index: 1;
+  }
+
 .label {
   color: white;
   font-size: 18px;
   font-weight: bold;
 }
 
-h1 {
-  color: white;
+.input {
+  font-size: 24px;
+  background-color: lightblue;
+}
+
+audio {
+  margin-left: 50px;
 }
 
 .fish {
@@ -28,7 +46,7 @@ h1 {
   place-content: center;
   text-align: center;
   border-radius: 50%;
-
+  
   position: absolute;
   animation: linear infinite;
   animation-name: swim;
@@ -41,23 +59,4 @@ h1 {
   100% {
     left: 110%;
   }
-}
-
-#fish1 {
-  /* animation-duration: 20s;
-  bottom: 80%;
-  animation-delay: -5s; */
-  /* border: 5px solid red; */
-}
-
-.fish.two {
-  animation-duration: 30s;
-  bottom: 50%;
-  animation-delay: -15s;
-}
-
-.fish.three {
-  animation-duration: 40s;
-  bottom: 10%;
-  animation-delay: -1s;
 }
