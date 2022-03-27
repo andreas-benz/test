@@ -1,6 +1,6 @@
 # React boilerplate
 
-Contains the essence of a react component
+Contains the essence of a react component.
 
 ## Getting started
 
